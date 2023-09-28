@@ -21,11 +21,11 @@ class HelloControllerTest {
 
     @Test
     void index() throws Exception {
-        assertEquals("hello from Spring Boot + Tanzu!", controller.index());
+        assertEquals("Greetings from Spring Boot + Tanzu!", controller.index());
 
         mockMvc
             .perform(get("/"))
             .andExpect(status().isOk())
-            .andExpect(content().string("hello from Spring Boot + Tanzu!"));
+            .andExpect(content().string("Greetings from Spring Boot + Tanzu!"));
     }
 }
